@@ -1,48 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meme Generator</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body onload="onInit()">
-   
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body onload="onInit()">
     <header class="">
-        <div class="main-logo">memeGen</div>
+      <div class="main-logo">memeGen</div>
 
-        <nav class="main-nav">
-            <ul class="ul">
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-
+      <nav class="main-nav">
+        <ul class="ul">
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
     </header>
     <main class="main-content">
-        <section class="editor-section">
+      <section class="editor-section">
+        <div>
+          <canvas width="400"></canvas>
+        </div>
 
-            
-            <div>
-                <canvas width="400"></canvas>
-            </div>
-            
-            <div class="btn-continer">
-                <input type="text" oninput="onSetText(this.value)">
-                <input class="color-picker" type="color" value="#000000" oninput="onSetColor(this.value)" />
-                <a href="#" onclick="onDownloadImg(this)" download="file-name">Download</a>
-            </div>
-        </section>
+        <div class="btn-continer">
+          <input type="text" oninput="onSetText(this.value)" />
+          <input
+            class="color-picker"
+            type="color"
+            value="#000000"
+            oninput="onSetColor(this.value)"
+          />
 
-        <section class="editor-section">
+          <button onclick="onAddLine()">Add Line</button>
+          <button onclick="onSwitchLine()">Switch Line</button>
+          <button class="font-size" onclick="onUpdateFontSize(+1)">+</button>
+          <button class="font-size" onclick="onUpdateFontSize(-1)">-</button>
 
-        </section>
+          <a href="#" onclick="onDownloadImg(this)" download="file-name"
+            >Download</a
+          >
+        </div>
+      </section>
+
+      <section class="gallery-section"></section>
     </main>
-    
-    <script src="js/main.js"></script>
+
     <script src="js/services/meme.js"></script>
     <script src="js/controllers/meme.js"></script>
 
-
-</body>
+    <script src="js/controllers/gallery.js"></script>
+  </body>
 </html>
