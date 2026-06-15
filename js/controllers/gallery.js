@@ -37,6 +37,4 @@ function onShowAbout() {
 
   elAbout.scrollIntoView({ behavior: "smooth" })
 }
-function onHireMe() {
-  window.location.replace("https://www.linkedin.com/in/soli-kolet-58b5a6191/")
-}
+
