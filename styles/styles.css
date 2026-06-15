@@ -10,11 +10,9 @@
 /*COMPONENTS*/
 @import url("/styles/components/main-header.css");
 @import url("/styles/components/editor-section.css");
-
 @import url("/styles/components/gallery-section.css");
-
 @import url("/styles/components/meme-buttons.css");
-
 @import url("/styles/components/about-section.css");
+
 /*mq*/
 @import url("/styles/setup/mq.css");
