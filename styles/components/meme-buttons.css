@@ -7,6 +7,9 @@
   gap: 15px;
   
 }
+button{
+  margin-top: 15px;
+}
 .btn-container input[type="text"] {
   width: 100%;
   padding: 10px 16px;
@@ -20,6 +23,7 @@
 }
 
 .btn-container button {
+
   padding: 10px 16px;
   
   border: none;
