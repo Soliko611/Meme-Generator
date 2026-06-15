@@ -4,28 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meme Generator</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
   </head>
+
   <body onload="onInit()">
-    <header class="">
-      <div class="main-logo">memeGen</div>
+    <div class="main-screen" onclick="toggleMenu()"></div>
 
-      <nav class="main-nav">
-        <ul class="ul">
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main-content">
-      <section class="editor-section">
-        <div>
-          <canvas width="400"></canvas>
+    <header class="main-header">
+      <div class="header-content main-layout">
+        <div class="nav-container flex space-between align-center">
+          <div class="main-logo">memeGen</div>
+          <div class="btn-toggle-menu" onclick="toggleMenu()">☰</div>
+
+          <nav class="main-nav">
+            <button class="btn-close-menu" onclick="toggleMenu()">✕</button>
+            <ul class="clean-list flex">
+              <li><a href="#" onclick="onShowGallery()">Gallery</a></li>
+              <li><a href="#" onclick="onShowAbout()">About</a></li>
+            </ul>
+          </nav>
         </div>
+      </div>
+    </header>
 
-        <div class="btn-continer">
-          <input type="text" oninput="onSetText(this.value)" />
+    <main class="main-content">
+      
+      <section class="editor-section main-layout flex space-between hidden">
+        <div class="flex space-between">
+
+          <div class="canvas-container flex justify-center align-center">
+            <canvas width="400"></canvas>
+          </div>
+
+        <div class="btn-container flex-direction-column">
           <input
+            type="text"
+            placeholder="Enter text"
+            oninput="onSetText(this.value)"
+            />
+            <input
             class="color-picker"
             type="color"
             value="#000000"
@@ -34,21 +51,44 @@
 
           <button onclick="onAddLine()">Add Line</button>
           <button onclick="onSwitchLine()">Switch Line</button>
-          <button class="font-size" onclick="onUpdateFontSize(+1)">+</button>
-          <button class="font-size" onclick="onUpdateFontSize(-1)">-</button>
-
+          <button class="btn-delete-line" onclick="onRemoveLine()">Delete Line</button>
+          <div class="font-size">
+            <button  onclick="onUpdateFontSize(+1)">+</button>
+            <button  onclick="onUpdateFontSize(-1)">-</button>
+            <button onclick="onMoveLineVertical(-10)">↑</button>
+            <button onclick="onMoveLineVertical(10)">↓</button>
+          </div>
+          
+          <input type="file" id="fileInput" class="file-input">
+          <label for="fileInput" class="btn-upload">Choose File</label>
+          <p id="fileName"></p>
+          
           <a href="#" onclick="onDownloadImg(this)" download="file-name"
-            >Download</a
+          >Download</a
           >
         </div>
+        </div>
+      </div>
       </section>
 
-      <section class="gallery-section"></section>
+      <section class="gallery-section main-layout">
+        <div class="images-container grid"></div>
+      </section>
+
+
+      <section class="about-section">
+        <img src="" alt="" class="about-img">
+        <h2>About Us</h2>
+        <h3>Full-Stack <span>Developer</span></h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, iusto? Asperiores, doloremque ut perspiciatis distinctio reiciendis reprehenderit nobis deleniti dolor enim laborum molestias repellendus saepe dolores commodi, nihil minima consequatur?</p>
+        <button class="btn-hire"></button>
+      </section>
     </main>
 
+    <script src="js/services/util.js"></script>
     <script src="js/services/meme.js"></script>
-    <script src="js/controllers/meme.js"></script>
 
+    <script src="js/controllers/meme.js"></script>
     <script src="js/controllers/gallery.js"></script>
   </body>
 </html>

@@ -1,0 +1,20 @@
+/*SETUP */
+@import url("/styles/setup/vars.css");
+@import url("/styles/setup/typography.css");
+
+/*BASE*/
+@import url("/styles/base/basics.css");
+@import url("/styles/base/helpers.css");
+@import url("/styles/base/layout.css");
+
+/*COMPONENTS*/
+@import url("/styles/components/main-header.css");
+@import url("/styles/components/editor-section.css");
+
+@import url("/styles/components/gallery-section.css");
+
+@import url("/styles/components/meme-buttons.css");
+
+@import url("/styles/components/about-section.css");
+/*mq*/
+@import url("/styles/setup/mq.css");

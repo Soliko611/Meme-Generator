@@ -1,0 +1,24 @@
+/* Main Layout */
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1rem minmax(0, 900px) 1rem;
+
+    justify-content: center;
+}
+
+.main-layout>* {
+    grid-column: 2;
+}
+
+.main-layout>*.full {
+    grid-column: 1 / -1;
+}
+
+/* Card Layout */
+
+.card-layout {
+    display: grid;
+    row-gap: 50px;
+    margin-bottom: 120px;
+}
