@@ -1,14 +1,14 @@
-@import url("styles/setup/vars.css");
-@import url("styles/setup/typography.css");
+@import url("setup/vars.css");
+@import url("setup/typography.css");
 
-@import url("styles/base/basics.css");
-@import url("styles/base/helpers.css");
-@import url("styles/base/layout.css");
+@import url("base/basics.css");
+@import url("base/helpers.css");
+@import url("base/layout.css");
 
-@import url("styles/components/main-header.css");
-@import url("styles/components/editor-section.css");
-@import url("styles/components/gallery-section.css");
-@import url("styles/components/meme-buttons.css");
-@import url("styles/components/about-section.css");
+@import url("components/main-header.css");
+@import url("components/editor-section.css");
+@import url("components/gallery-section.css");
+@import url("components/meme-buttons.css");
+@import url("components/about-section.css");
 
-@import url("styles/setup/mq.css");
+@import url("setup/mq.css");
